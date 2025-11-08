@@ -1,6 +1,6 @@
 context:
   name: torch_memory_saver
-  version: 0.0.8
+  version: "0.0.9"
   cuda_build_string: cuda_${{ cuda_compiler_version | version_to_buildstring }}
 
 package:
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/torch_memory_saver-${{ version }}.tar.gz
-  sha256: 7d318e6e209b27d883e34d5efa4aaf7f31adf9974a71abd76a9508f8b543af01
+  sha256: 3bbf76391fb16870b1b0df279fc281c8a05ef8f8809400b309b0a8240e8ee5ba
 
 build:
   skip:
