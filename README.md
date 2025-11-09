@@ -185,6 +185,3 @@ Feedstock Maintainers
 
 * [@shermansiu](https://github.com/shermansiu/)
 
-
-<!-- dummy commit to enable rerendering -->
-
