@@ -1,3 +1,6 @@
+azure:
+  settings_linux:
+    swapfile_size: 10GiB
 conda_build_tool: rattler-build
 github:
   branch_name: main

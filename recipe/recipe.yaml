@@ -1,6 +1,7 @@
 context:
   name: torch_memory_saver
   version: 0.0.8
+  cuda_build_string: cuda_${{ cuda_compiler_version | version_to_buildstring }}
 
 package:
   name: ${{ name|lower }}
@@ -13,8 +14,10 @@ source:
 build:
   skip:
     - cuda_compiler_version == "None"
+    - not linux
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  string: ${{ cuda_build_string }}py${{ python | version_to_buildstring }}h${{ hash }}_${{ build_number }}
+  number: 1
 
 requirements:
   build:
