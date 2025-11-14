@@ -15,7 +15,7 @@ build:
   skip:
     - cuda_compiler_version == "None"
     - not linux
-  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  script: MAX_JOBS=1 ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   string: ${{ cuda_build_string }}py${{ python | version_to_buildstring }}h${{ hash }}_${{ build_number }}
   number: 1
 
