@@ -20,7 +20,7 @@ build:
     - export TMS_CUDA_MAJOR="${TMS_CUDA_MAJOR:-${CUDA_VERSION%%.*}}"
     - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   string: ${{ cuda_build_string }}py${{ python | version_to_buildstring }}h${{ hash }}_${{ build_number }}
-  number: 0
+  number: 1
 
 requirements:
   build:
