@@ -15,7 +15,10 @@ build:
   skip:
     - cuda_compiler_version == "None"
     - not linux
-  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  script:
+    - export CUDA_VERSION=${{ cuda_compiler_version }}
+    - export TMS_CUDA_MAJOR="${TMS_CUDA_MAJOR:-${CUDA_VERSION%%.*}}"
+    - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   string: ${{ cuda_build_string }}py${{ python | version_to_buildstring }}h${{ hash }}_${{ build_number }}
   number: 0
 
