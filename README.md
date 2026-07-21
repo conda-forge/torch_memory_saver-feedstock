@@ -145,4 +145,5 @@ Feedstock Maintainers
 =====================
 
 * [@shermansiu](https://github.com/shermansiu/)
+* [@xhochy](https://github.com/xhochy/)
 
