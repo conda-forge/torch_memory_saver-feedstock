@@ -1,8 +1,5 @@
 provider:
   linux_aarch64: default
-azure:
-  settings_linux:
-    swapfile_size: 10GiB
 conda_build_tool: rattler-build
 conda_install_tool: pixi
 github:
@@ -11,3 +8,7 @@ github:
 conda_build:
   error_overlinking: true
 conda_forge_output_validation: true
+workflow_settings:
+  pagefile_size:
+    - os: linux
+      value: 10
